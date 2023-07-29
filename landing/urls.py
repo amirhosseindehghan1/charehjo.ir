@@ -5,5 +5,5 @@ from .views import discovery, market, develop_and_launch
 urlpatterns = [
     path('', discovery),
     path('market/', market),
-    path('market/', develop_and_launch),
+    path('develop-and-launch/', develop_and_launch),
     ]
