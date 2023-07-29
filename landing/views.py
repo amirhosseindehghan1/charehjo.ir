@@ -13,3 +13,6 @@ def develop_and_launch(request):
 
 def problem_solving(request):
     return render(request, 'problem_solving.html')
+
+def register(request):
+    return render(request, 'register.html')
