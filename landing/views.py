@@ -5,3 +5,5 @@ from django.shortcuts import render
 def discovery(request):
     return render(request, 'discovery.html')
 
+def market(request):
+    return render(request, 'market.html')
