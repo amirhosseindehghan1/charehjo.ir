@@ -16,3 +16,9 @@ def problem_solving(request):
 
 def register(request):
     return render(request, 'register.html')
+
+def grade_sheet(request):
+    return render(request, 'grade_sheet.html')
+
+def roadmap(request):
+    return render(request, 'roadmap.html')
