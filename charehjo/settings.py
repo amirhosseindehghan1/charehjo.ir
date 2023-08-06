@@ -25,8 +25,10 @@ SECRET_KEY = 'django-insecure-x)0)eckqzpcrfn#0&)ujqny&(k&0k)6(_b%nkjj1mm-c-vh-^4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['www.app.charehjo.ir', 'app.charehjo.ir', '127.0.0.1']
+CSRF_TRUSTED_ORIGINS = [
+    'https://charehjo.ir'
+]
 
 # Application definition
 
