@@ -1,5 +1,6 @@
-from django.shortcuts import render
-
+from django.shortcuts import render, redirect
+from .forms import RegisterForm
+from .models import Register
 # Create your views here.
 
 def discovery(request):
@@ -15,7 +16,15 @@ def problem_solving(request):
     return render(request, 'problem_solving.html')
 
 def register(request):
-    return render(request, 'register.html')
+    if request.method == 'POST':
+        form = RegisterForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/grade-sheet')
+    else:
+        form = RegisterForm()
+
+    return render(request, 'register.html', {'form': form})
 
 def grade_sheet(request):
     return render(request, 'grade_sheet.html')

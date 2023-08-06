@@ -1,7 +1,7 @@
 <!doctype html>
 <!-- add direction (rtl/ltr) to html, its very important -->
 <!-- html dir change the arya bootstrap alignment and direction -->
-<html lang="fa" dir="rtl">
+<html lang="fa" dir="rtl" xmlns="http://www.w3.org/1999/html">
 <head>
 <!-- Required meta tags -->
 <meta charset="utf-8">
@@ -34,73 +34,192 @@
    </div>
 
 </section>
+    <div class="container mt-5">
 
-<!-- Discovery question -->
-<section>
+        <form method="post">
+            {% csrf_token %}
+            <!-- Use Bootstrap classes to style the form -->
+            <div class="form-group">
+                <label for="{{ form.firstname.id_for_label }}">نام</label>
+               <input type="text" class="form-control" id="{{ form.firstname.id_for_label }}" name="{{ form.firstname.name }}" required placeholder="محمدرضا">
 
-        <br /><br />
-    <div class="container text-center">
+            </div>
+            <div class="form-group">
+                <label for="{{ form.lastname.id_for_label }}">نام خانوادگی</label>
+                <input type="text" class="form-control" id="{{ form.lastname.id_for_label }}" name="{{ form.lastname.name }}" required placeholder="محمدی">
+            </div>
+            <div class="form-group">
+                <label for="{{ form.mobile.id_for_label }}">شماره موبایل</label>
+               <input type="number" class="form-control" id="{{ form.mobile.id_for_label }}" name="{{ form.mobile.name }}" required minlength="11" maxlength="11" placeholder="09123456789">
+            </div>
+            <div class="form-group">
+                <label for="{{ form.email.id_for_label }}">ایمیل</label>
+              <input type="email" class="form-control" id="{{ form.email.id_for_label }}" name="{{ form.email.name }}" required placeholder="info@yoursite.com">
+            </div>
+            <div class="form-group">
+                <label for="{{ form.job.id_for_label }}">موقعیت شغلی</label>
+                {{ form.job }}
+            </div>
+            <div class="form-group">
+                <label for="{{ form.education.id_for_label }}">تحصیلات</label>
+                {{ form.education }}
+            </div>
+            <div class="form-group">
+                <label for="{{ form.experience.id_for_label }}">سابقه کار</label>
+                {{ form.experience }}
+            </div><br /><br /><br />
+            <button type="submit" class="btn btn-success">بعدی</button>
 
-        <input class="form-control" type="text" placeholder="نام" required><br />
-        <input class="form-control" type="text" placeholder="نام خانوادگی" required><br />
-        <input class="form-control" type="number" placeholder="موبایل" required><br />
-        <input class="form-control" type="email" placeholder="ایمیل" required><br />
-        <div class="dropdown show">
-  <button class="form-control" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-   <p style="text-align: right">
-       <img src="/static/images/dropdown.png">&nbsp;
-       موقعیت شغلی</p>
-  </button>
-
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <a class="dropdown-item">1</a>
-    <a class="dropdown-item">2</a>
-    <a class="dropdown-item">3</a>
-  </div>
-</div><br />
-        <div class="dropdown show">
-  <button class="form-control" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-   <p style="text-align: right">
-       <img src="/static/images/dropdown.png">&nbsp;
-       تحصیلات</p>
-  </button>
-
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <a class="dropdown-item">1</a>
-    <a class="dropdown-item">2</a>
-    <a class="dropdown-item">3</a>
-  </div>
-</div><br />
-        <div class="dropdown show">
-  <button class="form-control" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-   <p style="text-align: right">
-       <img src="/static/images/dropdown.png">&nbsp;
-       سابقه کار</p>
-  </button>
-
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <a class="dropdown-item">1</a>
-    <a class="dropdown-item">2</a>
-    <a class="dropdown-item">3</a>
-  </div>
-</div>
-
+        </form>
+         <br /><br /><br />
     </div>
-
-</section>
-
-<div class="container text-center">
-    <br /><br />
-    <a href="/grade-sheet/" class="btn btn-success" style="width: 25%; border-radius: 50px;">بعدی</a>
-    <br /><br /><br />
-</div>
-
-
-
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- Add Bootstrap JS and jQuery links here (if needed) -->
 <script type="text/javascript" src="/static/js/jquery.slim.min.js"></script>
 <script type="text/javascript" src="/static/js/popper.min.js"></script>
 <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{#<!doctype html>#}
+{#<!-- add direction (rtl/ltr) to html, its very important -->#}
+{#<!-- html dir change the arya bootstrap alignment and direction -->#}
+{#<html lang="fa" dir="rtl" xmlns="http://www.w3.org/1999/html">#}
+{#<head>#}
+{#<!-- Required meta tags -->#}
+{#<meta charset="utf-8">#}
+{#<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">#}
+{#<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>#}
+{#<!-- Bootstrap CSS -->#}
+{#<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.rtl.css" />#}
+{#<link rel="stylesheet" type="text/css" href="/static/style.css" />#}
+{##}
+{#<title>چاره جو</title>#}
+{#</head>#}
+{#<body>#}
+{##}
+{##}
+{#<div class="container-fluid">#}
+{#    <a href=""><img src="/static/images/logo.png" class="img-fluid" width="300" style="padding: 35px;" alt="چاره جو"><br /><br /><br /></a>#}
+{#</div>#}
+{##}
+{#<!-- Header -->#}
+{#<section>#}
+{##}
+{#   <div class="container text-center">#}
+{#       <div class="row">#}
+{#           <div class="col-3" style="color: #1D8841;"><img src="/static/images/submit.png" /><b>ارزیابی</b></div>#}
+{#           <div class="col-3" style="color: #3B5CCE"><img src="/static/images/number2blue.png" /><b>ثبت نام</b></div>#}
+{#           <div class="col-3"><img src="/static/images/number3.png" /><b>کارنامه</b></div>#}
+{#           <div class="col-3"><img src="/static/images/number4.png" /><b>نقشه راه</b></div>#}
+{#        </div>#}
+{##}
+{#   </div>#}
+{##}
+{#</section>#}
+{##}
+{#<!-- Discovery question -->#}
+{#<section>#}
+{##}
+{#        <br /><br />#}
+{#    <form method="post" action="">#}
+{#        {% csrf_token %}#}
+{##}
+{#                <label for="{{ form.first_name.id_for_label }}">First Name</label>#}
+{#                {{ form.firstname }}#}
+{##}
+{#    <div class="container text-center">#}
+{##}
+{#        <input class="form-control" type="text" placeholder="نام" required><br />#}
+{#        <input class="form-control" type="text" placeholder="نام خانوادگی" required><br />#}
+{#        <input class="form-control" type="number" placeholder="موبایل" required><br />#}
+{#        <input class="form-control" type="email" placeholder="ایمیل" required><br />#}
+{#        <div class="dropdown show">#}
+{#  <button class="form-control" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#}
+{#   <p style="text-align: right">#}
+{#       <img src="/static/images/dropdown.png">&nbsp;#}
+{#       موقعیت شغلی</p>#}
+{#  </button>#}
+{##}
+{#  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">#}
+{#    <a class="dropdown-item">علاقه مند یا دانشجو</a>#}
+{#    <a class="dropdown-item">دستیار مدیر محصول</a>#}
+{#    <a class="dropdown-item">مدیر محصول</a>#}
+{#    <a class="dropdown-item">مدیر محصول ارشد</a>#}
+{#  </div>#}
+{#</div><br />#}
+{#        <div class="dropdown show">#}
+{#  <button class="form-control" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#}
+{#   <p style="text-align: right">#}
+{#       <img src="/static/images/dropdown.png">&nbsp;#}
+{#       تحصیلات</p>#}
+{#  </button>#}
+{##}
+{#  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">#}
+{#    <a class="dropdown-item">کمتر از کارشناسی</a>#}
+{#    <a class="dropdown-item">کارشناسی</a>#}
+{#    <a class="dropdown-item">کارشناسی ارشد</a>#}
+{#    <a class="dropdown-item">دکتری</a>#}
+{#    <a class="dropdown-item">دیگر</a>#}
+{#  </div>#}
+{#</div><br />#}
+{#        <div class="dropdown show">#}
+{#  <button class="form-control" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#}
+{#   <p style="text-align: right">#}
+{#       <img src="/static/images/dropdown.png">&nbsp;#}
+{#       سابقه کار</p>#}
+{#  </button>#}
+{##}
+{#  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">#}
+{#    <a class="dropdown-item">کمتر از یک سال</a>#}
+{#    <a class="dropdown-item">بین یک تا سه سال</a>#}
+{#    <a class="dropdown-item">بین سه تا پنج سال</a>#}
+{#    <a class="dropdown-item">بیشتر از پنج سال</a>#}
+{#  </div>#}
+{#</div>#}
+{##}
+{#    </div>#}
+{##}
+{#</section>#}
+{##}
+{#<div class="container text-center">#}
+{#    <br /><br />#}
+{#    <a href="/grade-sheet/" class="btn btn-success" style="width: 25%; border-radius: 50px;">بعدی</a>#}
+{#    <br /><br /><br />#}
+{#</div>#}
+{#</form>#}
+{##}
+{##}
+{#<!-- Optional JavaScript -->#}
+{#<!-- jQuery first, then Popper.js, then Bootstrap JS -->#}
+{#<script type="text/javascript" src="/static/js/jquery.slim.min.js"></script>#}
+{#<script type="text/javascript" src="/static/js/popper.min.js"></script>#}
+{#<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>#}
+{#</body>#}
+{#</html>#}
