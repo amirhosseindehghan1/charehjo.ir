@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['www.app.charehjo.ir', 'app.charehjo.ir', '127.0.0.1']
 CSRF_TRUSTED_ORIGINS = [
-    'https://charehjo.ir'
+    'https://app.charehjo.ir'
 ]
 
 # Application definition
