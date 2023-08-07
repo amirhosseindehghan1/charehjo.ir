@@ -16,9 +16,61 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.rtl.css" />
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 <link rel="stylesheet" type="text/css" href="/static/style.css" />
 
 <title>چاره جو</title>
+    <style>
+        section.pricing {
+  background: #007bff;
+  background: linear-gradient(to right, #0062E6, #33AEFF);
+}
+
+.pricing .card {
+  border: none;
+  border-radius: 1rem;
+  transition: all 0.2s;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.pricing hr {
+  margin: 1.5rem 0;
+}
+
+.pricing .card-title {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+}
+
+.pricing .card-price {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.pricing .card-price .period {
+  font-size: 0.8rem;
+}
+
+.pricing ul li {
+  margin-bottom: 1rem;
+}
+
+.pricing .text-muted {
+  opacity: 0.7;
+}
+
+.pricing .btn {
+  font-size: 80%;
+  border-radius: 5rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  padding: 1rem;
+  opacity: 0.7;
+  transition: all 0.2s;
+}
+    </style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -50,71 +102,106 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <br /><br />
     <div class="container text-center">
-  <div class="row">
-      <div class="col-lg-6">
-<div class="card" style="border-radius: 20px;">
-  <h6 style="background-color: #2993FF; height: 80px; color: white;">یک ماهه</h6>
-    <img src="/static/images/circleblue.png" width="100" height="100" style="margin-top: -50px; margin-right: auto; margin-left: auto;"/>
-
-  <p style="padding: 2px;">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، <img style="float: right; padding: 5px;" src="/static/images/submit.png" /></p>
-  <p style="padding: 2px;">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، <img style="float: right; padding: 5px;" src="/static/images/submit.png" /></p>
-  <p style="padding: 2px;">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، <img style="float: right; padding: 5px;" src="/static/images/submit.png" /></p>
-  <p style="padding: 2px;">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، <img style="float: right; padding: 5px;" src="/static/images/submit.png" /></p>
-  <p style="padding: 2px;">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، <img style="float: right; padding: 5px;" src="/static/images/submit.png" /></p>
-  <p style="padding: 2px;">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، <img style="float: right; padding: 5px;" src="/static/images/submit.png" /></p>
-
-  <p><a class="btn btn-success" style="width: 25%; border-radius: 50px;">خرید</a></p>
-</div>
+  <div class="container text-left">
+    <div class="row">
+      <!-- Free Tier -->
+      <div class="col-lg-4">
+        <div class="card mb-5 mb-lg-0">
+          <div class="card-body">
+            <h5 class="card-title text-muted text-uppercase text-center">پکیج رایگان</h5>
+            <h6 class="card-price text-center"><span class="period">ماهانه</span></h6>
+            <hr>
+            <ul class="fa-ul">
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>چالش های واقعی کسب وکارها</li>
+              <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>راه حل های ارائه شده</li>
+              <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>نقشه راه جونیور به سنیور</li>
+              <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>گفتگو های تخصصی</li>
+              <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>دوره های آموزشی تخصصی</li>
+              <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>منتورشیپ</li>
+              <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>پشتیبانی تکالیف</li>
+              <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>شرکت در چالش های سازمانی</li>
+              <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>پیشنهاد فرصت های شغلی اختصاصی</li>
+            </ul>
+            <div class="d-grid">
+              <a href="#" class="btn btn-primary text-uppercase">خرید</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Plus Tier -->
+     <div class="col-lg-4">
+        <div class="card mb-5 mb-lg-0">
+          <div class="card-body">
+            <h5 class="card-title text-muted text-uppercase text-center">پکیج مقدماتی</h5>
+            <h6 class="card-price text-center"><span class="period">ماهانه</span></h6>
+            <hr>
+            <ul class="fa-ul">
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>چالش های واقعی کسب وکارها</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>راه حل های ارائه شده</li>
+               <li><span class="fa-li"><i class="fas fa-check"></i></span>نقشه راه جونیور به سنیور</li>
+              <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>گفتگو های تخصصی</li>
+              <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>دوره های آموزشی تخصصی</li>
+              <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>منتورشیپ</li>
+              <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>پشتیبانی تکالیف</li>
+              <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>شرکت در چالش های سازمانی</li>
+              <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>پیشنهاد فرصت های شغلی اختصاصی</li>
+            </ul>
+            <div class="d-grid">
+              <a href="#" class="btn btn-primary text-uppercase">خرید</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Pro Tier -->
+     <div class="col-lg-4">
+        <div class="card mb-5 mb-lg-0">
+          <div class="card-body">
+            <h5 class="card-title text-muted text-uppercase text-center">پکیج تکمیلی</h5>
+            <h6 class="card-price text-center"><span class="period">ماهانه</span></h6>
+            <hr>
+            <ul class="fa-ul">
+             <li><span class="fa-li"><i class="fas fa-check"></i></span>چالش های واقعی کسب وکارها</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>راه حل های ارائه شده</li>
+               <li><span class="fa-li"><i class="fas fa-check"></i></span>نقشه راه جونیور به سنیور</li>
+             <li><span class="fa-li"><i class="fas fa-check"></i></span>گفتگو های تخصصی</li>
+               <li><span class="fa-li"><i class="fas fa-check"></i></span>دوره های آموزشی تخصصی</li>
+               <li><span class="fa-li"><i class="fas fa-check"></i></span>منتورشیپ</li>
+            <li><span class="fa-li"><i class="fas fa-check"></i></span>پشتیبانی تکالیف</li>
+              <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>شرکت در چالش های سازمانی</li>
+              <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>پیشنهاد فرصت های شغلی اختصاصی</li>
+            </ul>
+            <div class="d-grid">
+              <a href="#" class="btn btn-primary text-uppercase">خرید</a>
+            </div>
+          </div>
+        </div>
       </div>
 
-          <div class="col-lg-6">
-<div class="card" style="border-radius: 20px;">
-  <h6 style="background-color: #2993FF; height: 80px; color: white;">یک ماهه</h6>
-    <img src="/static/images/circleblue.png" width="100" height="100" style="margin-top: -50px; margin-right: auto; margin-left: auto;"/>
-
-  <p style="padding: 2px;">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، <img style="float: right; padding: 5px;" src="/static/images/submit.png" /></p>
-  <p style="padding: 2px;">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، <img style="float: right; padding: 5px;" src="/static/images/submit.png" /></p>
-  <p style="padding: 2px;">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، <img style="float: right; padding: 5px;" src="/static/images/submit.png" /></p>
-  <p style="padding: 2px;">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، <img style="float: right; padding: 5px;" src="/static/images/submit.png" /></p>
-  <p style="padding: 2px;">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، <img style="float: right; padding: 5px;" src="/static/images/submit.png" /></p>
-  <p style="padding: 2px;">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، <img style="float: right; padding: 5px;" src="/static/images/submit.png" /></p>
-
-  <p><a class="btn btn-success" style="width: 25%; border-radius: 50px;">خرید</a></p>
-</div>
+          <div class="col-lg-4">
+        <div class="card mb-5 mb-lg-0">
+          <div class="card-body">
+            <h5 class="card-title text-muted text-uppercase text-center">پکیج پیشرفته</h5>
+            <h6 class="card-price text-center"><span class="period">ماهانه</span></h6>
+            <hr>
+            <ul class="fa-ul">
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>چالش های واقعی کسب وکارها</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>راه حل های ارائه شده</li>
+               <li><span class="fa-li"><i class="fas fa-check"></i></span>نقشه راه جونیور به سنیور</li>
+             <li><span class="fa-li"><i class="fas fa-check"></i></span>گفتگو های تخصصی</li>
+               <li><span class="fa-li"><i class="fas fa-check"></i></span>دوره های آموزشی تخصصی</li>
+               <li><span class="fa-li"><i class="fas fa-check"></i></span>منتورشیپ</li>
+            <li><span class="fa-li"><i class="fas fa-check"></i></span>پشتیبانی تکالیف</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>شرکت در چالش های سازمانی</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>پیشنهاد فرصت های شغلی اختصاصی</li>
+            </ul>
+            <div class="d-grid">
+              <a href="#" class="btn btn-primary text-uppercase">خرید</a>
+            </div>
+          </div>
+        </div>
       </div>
-          <div class="col-lg-6" style="margin-top: 20px;">
-<div class="card" style="border-radius: 20px;">
-  <h6 style="background-color: #2993FF; height: 80px; color: white;">یک ماهه</h6>
-    <img src="/static/images/circleblue.png" width="100" height="100" style="margin-top: -50px; margin-right: auto; margin-left: auto;"/>
-
-  <p style="padding: 2px;">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، <img style="float: right; padding: 5px;" src="/static/images/submit.png" /></p>
-  <p style="padding: 2px;">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، <img style="float: right; padding: 5px;" src="/static/images/submit.png" /></p>
-  <p style="padding: 2px;">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، <img style="float: right; padding: 5px;" src="/static/images/submit.png" /></p>
-  <p style="padding: 2px;">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، <img style="float: right; padding: 5px;" src="/static/images/submit.png" /></p>
-  <p style="padding: 2px;">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، <img style="float: right; padding: 5px;" src="/static/images/submit.png" /></p>
-  <p style="padding: 2px;">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، <img style="float: right; padding: 5px;" src="/static/images/submit.png" /></p>
-
-  <p><a class="btn btn-success" style="width: 25%; border-radius: 50px;">خرید</a></p>
-</div>
-      </div>
-          <div class="col-lg-6" style="margin-top: 20px;">
-<div class="card" style="border-radius: 20px;">
-  <h6 style="background-color: #2993FF; height: 80px; color: white;">یک ماهه</h6>
-    <img src="/static/images/circleblue.png" width="100" height="100" style="margin-top: -50px; margin-right: auto; margin-left: auto;"/>
-
-  <p style="padding: 2px;">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، <img style="float: right; padding: 5px;" src="/static/images/submit.png" /></p>
-  <p style="padding: 2px;">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، <img style="float: right; padding: 5px;" src="/static/images/submit.png" /></p>
-  <p style="padding: 2px;">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، <img style="float: right; padding: 5px;" src="/static/images/submit.png" /></p>
-  <p style="padding: 2px;">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، <img style="float: right; padding: 5px;" src="/static/images/submit.png" /></p>
-  <p style="padding: 2px;">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، <img style="float: right; padding: 5px;" src="/static/images/submit.png" /></p>
-  <p style="padding: 2px;">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، <img style="float: right; padding: 5px;" src="/static/images/submit.png" /></p>
-
-  <p><a class="btn btn-success" style="width: 25%; border-radius: 50px;">خرید</a></p>
-</div>
-      </div>
-
-
     </div>
+  </div>
 
 </section>
 
