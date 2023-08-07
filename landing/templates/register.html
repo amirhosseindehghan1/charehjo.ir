@@ -44,6 +44,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
    </div>
 
 </section>
+
     <div class="container mt-5">
 
         <form method="post">
@@ -79,11 +80,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 {{ form.experience }}
             </div><br /><br /><br />
             <div class="container text-center">
-            <button type="submit" class="btn btn-success" style="width: 25%; border-radius: 50px;">تأیید</button>
+                 <div class="spinner" style="display: none;">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+           <button type="submit" class="btn btn-success" style="width: 25%; border-radius: 50px;">تأیید</button>
             </div>
         </form>
          <br /><br /><br />
     </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $('#myForm').submit(function(event) {
+      event.preventDefault();
+
+      // Check if the form is valid
+      if (!this.checkValidity()) {
+        // If the form is invalid, show an error message (if needed)
+        alert('Please fill in all the required fields.');
+        return;
+      }
+
+      // Show the spinner
+      $('.spinner').show();
+
+      // Wait for 3 seconds and then redirect
+      setTimeout(function() {
+        window.location.href = 'next_page.html'; // Replace 'next_page.html' with the URL of the next page
+      }, 3000); // 3000 milliseconds = 3 seconds
+    });
+  });
+</script>
+
+
     <!-- Add Bootstrap JS and jQuery links here (if needed) -->
 <script type="text/javascript" src="/static/js/jquery.slim.min.js"></script>
 <script type="text/javascript" src="/static/js/popper.min.js"></script>
