@@ -3,6 +3,17 @@
 <!-- html dir change the arya bootstrap alignment and direction -->
 <html lang="fa" dir="rtl" xmlns="http://www.w3.org/1999/html">
 <head>
+    <script>
+        // Function to generate a random password and set it in the password field
+        function generateAndSetRandomPassword() {
+            var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            var password = '';
+            for (var i = 0; i < 10; i++) {
+                password += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+            document.getElementById('id_password').value = password;
+        }
+    </script>
     <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -51,13 +62,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             {% csrf_token %}
             <!-- Use Bootstrap classes to style the form -->
             <div class="form-group">
-                <label for="{{ form.firstname.id_for_label }}">نام</label>
-               <input type="text" class="form-control" id="{{ form.firstname.id_for_label }}" name="{{ form.firstname.name }}" required placeholder="محمدرضا">
+                <label for="{{ form.first_name.id_for_label }}">نام</label>
+               <input type="text" class="form-control" id="{{ form.first_name.id_for_label }}" name="{{ form.first_name.name }}" required placeholder="محمدرضا">
 
             </div>
             <div class="form-group">
-                <label for="{{ form.lastname.id_for_label }}">نام خانوادگی</label>
-                <input type="text" class="form-control" id="{{ form.lastname.id_for_label }}" name="{{ form.lastname.name }}" required placeholder="محمدی">
+                <label for="{{ form.last_name.id_for_label }}">نام خانوادگی</label>
+                <input type="text" class="form-control" id="{{ form.last_name.id_for_label }}" name="{{ form.last_name.name }}" required placeholder="محمدی">
             </div>
             <div class="form-group">
                 <label for="{{ form.mobile.id_for_label }}">شماره موبایل</label>
@@ -80,40 +91,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 {{ form.experience }}
             </div><br /><br /><br />
             <div class="container text-center">
-                 <div class="spinner" style="display: none;">
-    <div class="spinner-border text-primary" role="status">
-      <span class="visually-hidden">Loading...</span>
-    </div>
-  </div>
            <button type="submit" class="btn btn-success" style="width: 25%; border-radius: 50px;">تأیید</button>
             </div>
+
         </form>
          <br /><br /><br />
     </div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-  $(document).ready(function() {
-    $('#myForm').submit(function(event) {
-      event.preventDefault();
-
-      // Check if the form is valid
-      if (!this.checkValidity()) {
-        // If the form is invalid, show an error message (if needed)
-        alert('Please fill in all the required fields.');
-        return;
-      }
-
-      // Show the spinner
-      $('.spinner').show();
-
-      // Wait for 3 seconds and then redirect
-      setTimeout(function() {
-        window.location.href = 'next_page.html'; // Replace 'next_page.html' with the URL of the next page
-      }, 3000); // 3000 milliseconds = 3 seconds
-    });
-  });
-</script>
 
 
     <!-- Add Bootstrap JS and jQuery links here (if needed) -->
