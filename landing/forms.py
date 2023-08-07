@@ -20,3 +20,8 @@ class RegistrationForm(forms.ModelForm):
     class Meta:
         model = MyUser
         fields = ['email', 'mobile', 'first_name', 'last_name', 'job', 'education', 'experience']
+        widgets = {
+                    'job': forms.Select(attrs={'class': 'form-control'}),
+                    'education': forms.Select(attrs={'class': 'form-control'}),
+                    'experience': forms.Select(attrs={'class': 'form-control'}),
+                }
