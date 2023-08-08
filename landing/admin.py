@@ -64,7 +64,7 @@ class CustomUserAdmin(UserAdmin):
     list_filter = ('is_admin',)
     fieldsets = (
         (None, {'fields': ('email', 'password')}),
-        ('Personal info', {'fields': ('mobile', 'first_name', 'last_name', 'is_active', 'date_joined')}),
+        ('Personal info', {'fields': ('mobile', 'first_name', 'last_name', 'job', 'education', 'experience', 'is_active', 'date_joined')}),
         ('tournament', {'fields': ()}),
         ('Permissions', {'fields': ('groups', 'user_permissions', 'is_admin',)}),
     )

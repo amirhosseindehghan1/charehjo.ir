@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 # from .forms import RegisterForm
 # from .models import Register
@@ -65,25 +66,12 @@ def register(request):
 
     # return render(request, 'register.html')
 
+
+@login_required(login_url='/admin/')
 def grade_sheet(request):
-    image_list = [
-        "/static/images/number1.png",
-        "/static/images/number2.png",
-        "/static/images/number3blue.png",
-        # Add the rest of your image URLs here...
-    ]
-
-    # Shuffle the image_list randomly
-    random.shuffle(image_list)
-
-    # Determine the number of images per row (let's assume 4 images per row)
-    images_per_row = 4
-
-    # Split the image_list into rows
-    image_rows = [image_list[i:i + images_per_row] for i in range(0, len(image_list), images_per_row)]
 
 
-    return render(request, 'grade_sheet.html', {'image_rows': image_rows})
+    return render(request, 'grade_sheet.html')
 
 def roadmap(request):
     return render(request, 'roadmap.html')
