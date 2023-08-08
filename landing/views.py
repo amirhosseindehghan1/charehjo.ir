@@ -1,10 +1,12 @@
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 # from .forms import RegisterForm
 # from .models import Register
+from django.contrib import messages
 import random
 import string
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 from django.contrib.auth import login, authenticate
 
 from . import forms
@@ -80,15 +82,22 @@ def roadmap(request):
         user = request.user
         if 'free_button' in request.POST:
             user.free = True
+            messages.success(request, "به زودی ایمیلی حاوی لینک ثبت نام و درگاه خرید برای شما ارسال خواهد شد.")
 
         if 'moghadamati_button' in request.POST:
             user.moghadamati = True
+            messages.success(request, "به زودی ایمیلی حاوی لینک ثبت نام و درگاه خرید برای شما ارسال خواهد شد.")
 
         if 'takmili_button' in request.POST:
             user.takmili = True
+            messages.success(request, "به زودی ایمیلی حاوی لینک ثبت نام و درگاه خرید برای شما ارسال خواهد شد.")
+
         if 'pro_button' in request.POST:
             user.pro = True
+            messages.success(request, "به زودی ایمیلی حاوی لینک ثبت نام و درگاه خرید برای شما ارسال خواهد شد.")
 
         user.save()
+        
+        return HttpResponseRedirect(reverse('roadmap'))
 
     return render(request, 'roadmap.html')

@@ -18,6 +18,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.rtl.css" />
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 <link rel="stylesheet" type="text/css" href="/static/style.css" />
+     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <title>چاره جو</title>
 
@@ -31,6 +32,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="container-fluid">
     <a href=""><img src="/static/images/logo.png" class="img-fluid" width="300" style="padding: 35px;" alt="چاره جو"><br /><br /><br /></a>
 </div>
+
+
+ {% if messages %}
+        {% for message in messages %}
+            <script>
+                Swal.fire({
+                    text: '{{ message }}',
+                    width: 500,
+                    backdrop: `rgba(255, 99, 71, 0.2) no-repeat`,
+                    confirmButtonText: 'متوجه شدم',
+                    confirmButtonColor: 'green',
+                    showCancelButton: false,
+                })
+            </script>
+        {% endfor %}
+    {% endif %}
 
 <!-- Header -->
 <section>
