@@ -105,6 +105,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="container text-left">
     <div class="row">
       <!-- Free Tier -->
+
       <div class="col-lg-4">
         <div class="card mb-5 mb-lg-0">
           <div class="card-body">
@@ -122,12 +123,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>شرکت در چالش های سازمانی</li>
               <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>پیشنهاد فرصت های شغلی اختصاصی</li>
             </ul>
-            <div class="d-grid">
-              <a href="#" class="btn btn-primary text-uppercase plan-free">خرید</a>
+
+        <form action="/roadmap/" method="post" id="myform">
+            {% csrf_token %}
+            <div class="d-grid text-center">
+           <button style="width: 50%; border-radius: 50px;" class="btn btn-primary text-uppercase plan-free" type="submit" name="free_button">خرید</button>
+{#              <a href="#" class="btn btn-primary text-uppercase plan-free">خرید</a>#}
             </div>
+             </form>
+
+
           </div>
         </div>
       </div>
+
       <!-- Plus Tier -->
      <div class="col-lg-4">
         <div class="card mb-5 mb-lg-0">
@@ -146,9 +155,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>شرکت در چالش های سازمانی</li>
               <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>پیشنهاد فرصت های شغلی اختصاصی</li>
             </ul>
-            <div class="d-grid">
-              <a href="#" class="btn btn-primary text-uppercase plan-moghadamati">خرید</a>
+
+        <form action="/roadmap/" method="post" id="moghadamati">
+            {% csrf_token %}
+            <div class="d-grid text-center">
+        <button style="width: 50%; border-radius: 50px;" class="btn btn-primary text-uppercase plan-free" type="submit" name="moghadamati_button">خرید</button>
+{#              <a href="#" class="btn btn-primary text-uppercase plan-free">خرید</a>#}
             </div>
+             </form>
+
+
           </div>
         </div>
       </div>
@@ -170,9 +186,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>شرکت در چالش های سازمانی</li>
               <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>پیشنهاد فرصت های شغلی اختصاصی</li>
             </ul>
-            <div class="d-grid">
-              <a href="#" class="btn btn-primary text-uppercase plan-takmili">خرید</a>
+
+        <form action="/roadmap/" method="post" id="takmili">
+            {% csrf_token %}
+            <div class="d-grid text-center">
+               <button style="width: 50%; border-radius: 50px;" class="btn btn-primary text-uppercase plan-free" type="submit" name="takmili_button">خرید</button>
+{#              <a href="#" class="btn btn-primary text-uppercase plan-free">خرید</a>#}
             </div>
+             </form>
+
           </div>
         </div>
       </div>
@@ -194,18 +216,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <li><span class="fa-li"><i class="fas fa-check"></i></span>شرکت در چالش های سازمانی</li>
               <li><span class="fa-li"><i class="fas fa-check"></i></span>پیشنهاد فرصت های شغلی اختصاصی</li>
             </ul>
-            <div class="d-grid">
-              <a href="#" class="btn btn-primary text-uppercase plan-pro">خرید</a>
+
+        <form action="/roadmap/" method="post" id="pro">
+            {% csrf_token %}
+            <div class="d-grid text-center">
+        <button style="width: 50%; border-radius: 50px;" class="btn btn-primary text-uppercase plan-free" type="submit" name="pro_button">خرید</button>
+{#              <a href="#" class="btn btn-primary text-uppercase plan-free">خرید</a>#}
             </div>
-          </div>
+             </form>
+
         </div>
       </div>
     </div>
   </div>
 
 </section>
-
-
 
 
 

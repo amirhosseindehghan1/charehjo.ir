@@ -41,6 +41,7 @@ def register(request):
             password = generate_random_password()
             user.set_password(password)
 
+
             # Save the user object with the random password
             user.save()
 
@@ -70,8 +71,24 @@ def register(request):
 @login_required(login_url='/admin/')
 def grade_sheet(request):
 
-
     return render(request, 'grade_sheet.html')
 
+
+@login_required(login_url='/admin/')
 def roadmap(request):
+    if request.method == 'POST':
+        user = request.user
+        if 'free_button' in request.POST:
+            user.free = True
+
+        if 'moghadamati_button' in request.POST:
+            user.moghadamati = True
+
+        if 'takmili_button' in request.POST:
+            user.takmili = True
+        if 'pro_button' in request.POST:
+            user.pro = True
+
+        user.save()
+
     return render(request, 'roadmap.html')

@@ -80,6 +80,10 @@ class MyUser(AbstractBaseUser, PermissionsMixin):
     job = models.CharField(null=True, blank=True, max_length=100, choices=job_choice, default="A4")
     education = models.CharField(null=True, blank=True, max_length=100, choices=education_choice, default="A4")
     experience = models.CharField(null=True, blank=True, max_length=100, choices=experience_choice, default="A4")
+    free = models.BooleanField(default=False, verbose_name = 'پلن رایگان')
+    moghadamati = models.BooleanField(default=False, verbose_name = 'پلن مقدماتی')
+    takmili = models.BooleanField(default=False, verbose_name = 'پلن تکمیلی')
+    pro = models.BooleanField(default=False, verbose_name = 'پلن پیشرفته')
     is_admin = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True, verbose_name='فعال/غیرفعال')
 
