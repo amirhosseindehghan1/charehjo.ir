@@ -82,19 +82,19 @@ def roadmap(request):
         user = request.user
         if 'free_button' in request.POST:
             user.free = True
-            messages.success(request, "به زودی ایمیلی حاوی لینک ثبت نام و درگاه خرید برای شما ارسال خواهد شد.")
+            messages.success(request, "به زودی ایمیلی حاوی لینک ثبت نام و درگاه پرداخت برای شما ارسال خواهد شد.")
 
         if 'moghadamati_button' in request.POST:
             user.moghadamati = True
-            messages.success(request, "به زودی ایمیلی حاوی لینک ثبت نام و درگاه خرید برای شما ارسال خواهد شد.")
+            messages.success(request, "به زودی ایمیلی حاوی لینک ثبت نام و درگاه پرداخت برای شما ارسال خواهد شد.")
 
         if 'takmili_button' in request.POST:
             user.takmili = True
-            messages.success(request, "به زودی ایمیلی حاوی لینک ثبت نام و درگاه خرید برای شما ارسال خواهد شد.")
+            messages.success(request, "به زودی ایمیلی حاوی لینک ثبت نام و درگاه پرداخت برای شما ارسال خواهد شد.")
 
         if 'pro_button' in request.POST:
             user.pro = True
-            messages.success(request, "به زودی ایمیلی حاوی لینک ثبت نام و درگاه خرید برای شما ارسال خواهد شد.")
+            messages.success(request, "به زودی ایمیلی حاوی لینک ثبت نام و درگاه پرداخت برای شما ارسال خواهد شد.")
 
         user.save()
 
