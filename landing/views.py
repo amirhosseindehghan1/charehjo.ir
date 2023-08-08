@@ -97,7 +97,7 @@ def roadmap(request):
             messages.success(request, "به زودی ایمیلی حاوی لینک ثبت نام و درگاه خرید برای شما ارسال خواهد شد.")
 
         user.save()
-        
+
         return HttpResponseRedirect(reverse('roadmap'))
 
     return render(request, 'roadmap.html')
