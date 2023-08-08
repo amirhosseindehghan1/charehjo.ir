@@ -76,7 +76,7 @@ def grade_sheet(request):
     return render(request, 'grade_sheet.html')
 
 
-@login_required(login_url='/admin/')
+@login_required(login_url='/')
 def roadmap(request):
     if request.method == 'POST':
         user = request.user
