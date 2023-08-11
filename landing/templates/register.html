@@ -92,6 +92,7 @@
            <div class="container text-center">
         <button type="submit" class="btn btn-success register" style="width: 25%; border-radius: 50px;" onclick="processForm()">تأیید</button>
     </div>
+
             <div id="processingMessage" class="container text-center" style="display: none;">
     <div class="spinner-border text-success" role="status">
         <span class="sr-only">در حال پردازش...</span>
@@ -121,24 +122,10 @@ function processForm() {
 
     setTimeout(function() {
         form.submit(); // Submit the form (navigate to the next page)
-    }, 5000); // Delay for 5 seconds
+    }, 3000); // Delay for 5 seconds
 }
 </script>
 
-{#<script>#}
-{#function processForm() {#}
-{#    var form = document.getElementById('submit-form');#}
-{#    var submitButton = form.querySelector('button[type="submit"]');#}
-{#    var processingMessage = document.getElementById('processingMessage');#}
-{##}
-{#    submitButton.disabled = true; // Disable the button#}
-{#    processingMessage.style.display = 'block'; // Show the spinner#}
-{##}
-{#    setTimeout(function() {#}
-{#        form.submit(); // Submit the form (navigate to the next page)#}
-{#    }, 3000); // Delay for 3 seconds#}
-{#}#}
-{#</script>#}
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
