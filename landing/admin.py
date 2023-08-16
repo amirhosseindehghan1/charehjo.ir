@@ -5,7 +5,7 @@ from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.forms import ReadOnlyPasswordHashField
 from django.core.exceptions import ValidationError
 from .models import MyUser
-# from import_export.admin import ExportActionModelAdmin, ImportExportModelAdmin
+from import_export.admin import ExportActionModelAdmin, ImportExportModelAdmin
 
 
 
@@ -52,7 +52,7 @@ class UserChangeForm(forms.ModelForm):
         fields = ('email', 'password', 'mobile', 'first_name', 'last_name', 'is_active', 'is_admin')
 
 
-class CustomUserAdmin(UserAdmin):
+class CustomUserAdmin(UserAdmin, ExportActionModelAdmin):
     # The forms to add and change user instances
     form = UserChangeForm
     add_form = UserCreationForm
@@ -65,7 +65,6 @@ class CustomUserAdmin(UserAdmin):
     fieldsets = (
         (None, {'fields': ('email', 'password')}),
         ('Personal info', {'fields': ('mobile', 'first_name', 'last_name', 'job', 'education', 'experience', 'free', 'moghadamati', 'takmili', 'pro', 'is_active', 'date_joined')}),
-        ('tournament', {'fields': ()}),
         ('Permissions', {'fields': ('groups', 'user_permissions', 'is_admin',)}),
     )
     # add_fieldsets is not a standard ModelAdmin attribute. UserAdmin
@@ -75,7 +74,7 @@ class CustomUserAdmin(UserAdmin):
             'classes': ('wide',),
             'fields': ('email', 'mobile',
                        'first_name', 'last_name', 'is_active', 'password1',
-                       'password2','connection_score',"user_permissions"),
+                       'password2',"user_permissions"),
         }),
     )
     search_fields = ('email', 'mobile', 'first_name', 'last_name')
